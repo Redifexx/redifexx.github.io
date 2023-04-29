@@ -1,0 +1,37 @@
+h1{
+    padding-left: 3%;
+    float: left;
+    font-size: 50px;
+    text-align: left;
+    color: #ebc728;
+}
+
+header{
+    overflow: hidden;
+    background-color: #01393a;
+    font-family: 'Kanit';
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+body {
+    background-image: url("background/scene.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 40px;
+}   
+nav {
+    padding-right: 7%;
+}
