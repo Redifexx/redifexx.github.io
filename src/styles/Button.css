@@ -1,0 +1,25 @@
+.button {
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 1);  /* Soft black shadow inward */
+  }
+  
+  .button:hover {
+    color: #7D0000;
+  }
+  
+  /* If you want to style the text inside the button further */
+  .button span {
+    font-family: "Jacquard 24", serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    
+  }
+  
