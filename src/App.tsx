@@ -1,6 +1,4 @@
 import './App.css'
-import Button from './components/Button'
-import CenteredRectangle from './components/CenteredRectangle'
 import NavBar from './components/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
