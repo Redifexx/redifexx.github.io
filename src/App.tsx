@@ -6,49 +6,6 @@ function App() {
 
   return (
     <>
-    <div>
-    <div className="starfall">
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-  <div className="falling-star"></div>
-</div>
       <CenteredRectangle>
         <h1>Giovanni Perez Colon</h1>
         <div className="linkContainer">
@@ -57,7 +14,6 @@ function App() {
           <Button text="Projects"/>
         </div>
       </CenteredRectangle>
-    </div>
     </>
   )
 }

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1F1919;
+  background-color: #adc49e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -74,6 +74,15 @@ button:focus-visible {
   align-items: center; /* Center children horizontally */
   justify-content: center; /* Center children vertically */
   gap: 9rem; /* Add spacing between elements */
+}
+
+/* Gap */
+
+@font-face {
+    font-family: 'Medieval';
+    src: local('Medieval'), url(./fonts/Seagram.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
 }
 
 
