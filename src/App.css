@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Fira';
+  src: url('/fonts/fira-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira';
+  src: url('/fonts/fira-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +54,49 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.App {
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  padding-top: 70px; /* Adjust depending on your navbar height */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #0f2235;
+  color: #ffffff;
+  font-family: 'Fira', sans-serif;
 }
