@@ -23,6 +23,10 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Add .nojekyll
+        run: echo "" > dist/.nojekyll
+
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
