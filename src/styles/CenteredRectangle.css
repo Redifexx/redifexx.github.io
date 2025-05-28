@@ -1,0 +1,23 @@
+
+.rectangle {
+    -webkit-font-smoothing: antialiased;
+    width: 75rem; /* Adjust width */
+    height: 20rem; /* Adjust height */
+    background-color: #27424d; /* Rectangle color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    color: #ffffff; /* Text color */
+    font-family: "Fira";
+    font-weight: 700;
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Center text alignment */
+    border: 4px solid #000000; /* Add a stroke */
+    text-shadow: 
+        4px 4px 4px rgba(255, 255, 255, 0.527);  /* Soft black shadow inward */
+  }
