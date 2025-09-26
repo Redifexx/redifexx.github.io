@@ -7,7 +7,7 @@
     "tw": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "wb": "webpack --watch",
     "sv": "serve .",
-    "tw-dev": "run-p tw wb sv"
+    "dev": "run-p wb sv"
   },
   "author": "",
   "license": "ISC",
