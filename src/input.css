@@ -1,6 +1,16 @@
 @import "tailwindcss";
-@tailwind;
-@source "./src";
+@plugin "daisyui";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  --font-display: "Questrial", sans-serif; 
+}
+
+@layer base {
+  body {
+    font-family: 'Zalando Sans Expanded', sans-serif;
+  }
+}
