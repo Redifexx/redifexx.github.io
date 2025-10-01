@@ -20,7 +20,7 @@
         <div class="absolute inset-0 bg-black/50 -z-10"></div>
 
         <div class= "flex flex-col max-w-[24rem] gap-6">
-            <div class= "bg-slate-900/50 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4"> 
+            <div class= "bg-neutral-900/50 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4"> 
                 <h1 class="text-white text-4xl text-shadow-md text-shadow-stone-200 text-left font-bold">Giovanni Perez Colon</h1>
                 <div class = "flex flex-row gap-1 font-display justify-right text-shadow-none">
                     <a href="../../index.html" class="btn btn-sm text-xl rounded-lg">Home</a>
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class= "hero bg-base-200/20 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-hidden"> 
+            <div class= "hero bg-neutral-800/20 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-hidden"> 
                 <h1 class="text-white text-4xl text-shadow-md text-shadow-stone-200 text-left font-bold">Categories</h1>
                 <div class = "flex flex-col gap-1 font-display text-shadow-none">
                 </div>
@@ -42,7 +42,7 @@
             <div 
                 id="card-container"
                 style= "height: calc(100vh - var(--spacing) * 14)"
-                class= "hero bg-base-200/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4 overflow-auto"
+                class= "hero bg-neutral-800/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4 overflow-hidden"
             > 
                 <div 
                     x-init="$watch('expanded', value => {
@@ -60,12 +60,11 @@
                         <div>
                             <button
                                 @click="toggleExpand(i); setExpanded(card)"
-                                style="box-shadow: 4px 4px 3px #66628f"
-                                class="card-body bg-slate-900/80 rounded-2xl aspect-square w-sm flex flex-col p-0 overflow-hidden text-left hover:brightness-125 active:scale-95 transition-all duration-300 ease-in-out"
+                                class="card-body fruitger-inset bg-neutral-950/60 rounded-2xl aspect-square w-xs flex flex-col p-0 overflow-hidden text-left hover:brightness-125 active:scale-95 transition-all duration-300 ease-in-out"
                             >
                                 <h2 class="card-title text-2xl px-7 pt-7" x-text="card.title"></h2>
                                 <p class="px-7 pt-2 text-lg font-display" x-text="card.shortDescription"></p>
-                                <img :src="card.thumbnail" class="flex flex-1 w-full object-cover bg-gradient-to-b from-slate-900/80 to-transparent pointer-events-none">
+                                <img :src="card.thumbnail" class="flex flex-1 w-full object-cover bg-gradient-to-b from-teal-950/80 to-transparent pointer-events-none">
                             </button>
                         </div>
                     </template>
@@ -75,7 +74,7 @@
                 <div 
                     id="card-container-overlay"
                     style= "height: calc(100vh - var(--spacing) * 14)"
-                    class= "absolute inset-0 bg-base-200/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col h-full gap-4 z-10 "
+                    class= "absolute inset-0 bg-neutral-950/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col h-full gap-6 z-10 "
                     x-show="expanded !== null"
                     x-transition:enter="transition ease-out duration-300"
                     x-transition:enter-start="translate-y-full opacity-0"
@@ -87,18 +86,29 @@
                     <div 
                     class = "overflow-y-auto flex-1"
                     >
-                        <h2 class="card-title text-5xl mb-4" x-text="expandedCard.title"></h2>
+                        <h2 class="card-title text-5xl neu-text-shadow justify-center" x-text="expandedCard.title"></h2>
 
-                        <div class="flex flex-wrap justify-center">
-                            <template x-for="media in expandedCard.media" :key="media">
-                                <img :src="media" class="rounded-lg object-cover">
+                        <div class="carousel w-full bg-neutral-950/50 rounded-3xl fruitger-inset my-7">
+                            <template x-for="(media, i) in expandedCard.media" :key="i">
+                                <div :id="'slide' + i" class="carousel-item relative w-full">
+                                    <img :src="media" class="rounded-lg object-contain max-h-[50vh] max-w-full mx-auto p-7">
+                                    <div 
+                                        x-show="expandedCard.media.length > 1"
+                                        class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+                                    >
+                                        <a :href="'#slide' + ((i - 1 + expandedCard.media.length) % expandedCard.media.length)"
+                                        class="btn btn-circle">❮</a>
+                                        <a :href="'#slide' + ((i + 1) % expandedCard.media.length)"
+                                        class="btn btn-circle">❯</a>
+                                    </div>
+                                </div>
                             </template>
                         </div>
 
                         <p class="text-lg" x-text="expandedCard.description0"></p>
                         <p class="text-lg mt-2" x-text="expandedCard.description1"></p>
                     </div>
-                    <button class="btn mt-4 justify-self-end" @click="toggleExpand(null); setExpanded(null)">Close</button>
+                    <button class="btn mt-4 rounded-lg justify-self-end bg-neutral-950 fruitger-inset" @click="toggleExpand(null); setExpanded(null)">Close</button>
                 </div>  
             </template>
         </div>

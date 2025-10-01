@@ -30,3 +30,13 @@
   width: 0; /* Chrome/Safari */
   background: transparent;
 }
+
+.fruitger-inset
+{
+  box-shadow: inset 3px 3px 12px rgba(107,114,128,0.6);
+}
+
+.neu-text-shadow
+{
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.4);
+}
