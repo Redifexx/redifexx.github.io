@@ -14,3 +14,19 @@
     font-family: 'Zalando Sans Expanded', sans-serif;
   }
 }
+
+.scroll-lock {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* hide scrollbar but keep scrolling */
+.scrollbar-overlay {
+  scrollbar-gutter: stable both-edges;
+  overflow-y: overlay;
+}
+
+.scrollbar-overlay::-webkit-scrollbar {
+  width: 0; /* Chrome/Safari */
+  background: transparent;
+}
