@@ -1,5 +1,7 @@
 interface Card {
     title: string;
+    date: string;
+    projectLength: number;
     shortDescription: string;
     thumbnail: string;
     description0: string;
@@ -9,11 +11,30 @@ interface Card {
 }
 export declare function cardGrid(): {
     cards: Card[];
+    activeCards: Card[];
     expanded: number | null;
     expandedCard: Card | null;
     defaultCard: Card;
+    isAscending: Boolean;
+    sortBy: number;
+    tags: Set<string>;
+    activeTags: Set<string>;
+    cardSize: number | null;
+    columns: number | null;
+    minColumns: number | null;
     loadCards(): Promise<void>;
+    resize(): void;
+    sortByDate(): void;
+    sortByName(): void;
+    sortByLength(): void;
+    toggleAsc(): void;
     toggleExpand(i: number | null): void;
     setExpanded(e: Card | null): void;
+    parseDate(dateStr: string): number;
+    reloadCards(): void;
+    getActiveTag(tag: string): boolean;
+    setActiveTag(tag: string): void;
+    isActiveTagsEmpty(): boolean;
+    cardInActiveTags(card: any): boolean;
 };
 export {};

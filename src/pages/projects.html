@@ -11,8 +11,11 @@
   <link rel="icon" type="image/svg+xml" href="./RGL.ico" />
   <link href="../../dist/output.css" rel="stylesheet">
 </head>
-<body class="">
-    <div class="relative min-h-screen flex p-7 bg-center bg-fixed gap-6"> 
+<body id="fullBody">
+    <div
+     x-data = "cardGrid()"
+        x-init = "loadCards()"
+    class="relative min-h-screen flex p-7 bg-center bg-fixed gap-6"> 
         <video autoplay muted loop playsinline
          class="absolute inset-0 w-full h-full object-cover -z-10">
             <source src="../../public/physx.mp4" type="video/mp4" />
@@ -20,29 +23,116 @@
         <div class="absolute inset-0 bg-black/50 -z-10"></div>
 
         <div class= "flex flex-col max-w-[24rem] gap-6">
-            <div class= "bg-neutral-900/50 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4"> 
+            <div class= "bg-neutral-900/80 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4"> 
                 <h1 class="text-white text-4xl text-shadow-md text-shadow-stone-200 text-left font-bold">Giovanni Perez Colon</h1>
-                <div class = "flex flex-row gap-1 font-display justify-right text-shadow-none">
-                    <a href="../../index.html" class="btn btn-sm text-xl rounded-lg">Home</a>
-                    <div class="btn btn-sm text-xl rounded-lg">Resume</div>
-                    <div class="btn btn-sm text-xl rounded-lg">Contact</div>
+                <div class = "flex flex-row gap-1 font-display justify-between text-shadow-none">
+                    <a href="../../index.html" class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">Home</a>
+                    <div class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">About</div>
+                    <div class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">Contact</div>
                 </div>
             </div>
 
-            <div class= "hero bg-neutral-800/20 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-hidden"> 
-                <h1 class="text-white text-4xl text-shadow-md text-shadow-stone-200 text-left font-bold">Categories</h1>
-                <div class = "flex flex-col gap-1 font-display text-shadow-none">
+            <div class= "hero bg-neutral-800/70 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-hidden"> 
+                <h1 class="text-white text-3xl text-shadow-md text-shadow-stone-200 text-left font-bold">Tags</h1>
+                <div class = "flex flex-wrap gap-2 font-display text-shadow-none">
+                    <template x-for="(tag, i) in [...tags]" :key="i">
+                        <div>
+                            <template x-if="getActiveTag(tag)">
+                                <button
+                                    @click="setActiveTag(tag)"
+                                    class="btn btn-sm text-xl bg-emerald-200/70 inset-shadow-sm inset-shadow-teal-900 rounded-lg px-3 whitespace-nowrap"
+                                    x-text="tag"
+                                >
+                                </button>
+                            </template>
+                            <template x-if="!getActiveTag(tag)">
+                                <button
+                                    @click="setActiveTag(tag)"
+                                    class="btn btn-sm text-xl inset-shadow-sm inset-shadow-teal-900 rounded-lg px-3 whitespace-nowrap"
+                                    x-text="tag"
+                                >
+                                </button>
+                            </template>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
         
-        <div x-data = "cardGrid()"
-            x-init = "loadCards()"
-            class="relative">
+        <div
+            class="relative w-full">
+            <div class= "bg-neutral-800/70 py-10 px-10 mb-5 rounded-3xl flex flex-row w-full justify-between backdrop-blur-xl">
+                <div class = "flex flex-row gap-4">
+                    <div class = "flex flex-col self-center">
+                        <h1 class="text-white text-xl text-shadow-md text-shadow-stone-200 text-left self-center font-bold">Sort By:</h1>
+                        <div class = "flex flex-row justify-between">
+                        </div>
+                    </div>
+
+                    <template x-if="sortBy == 0">
+                        <button 
+                            disabled
+                            class="btn btn-sm text-xl self-center rounded-lg disabled:text-white"
+                        >
+                        Date
+                        </button>
+                    </template>
+                     <template x-if="sortBy != 0">
+                        <button @click="sortByDate()"
+                            class="btn btn-sm text-xl self-center rounded-lg overflow-hidden
+                            hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.5)] 
+                            transition-all duration-300">
+                            Date
+                        </button>
+                    </template>
+
+                    <template x-if="sortBy == 1">
+                        <button disabled class="btn btn-outline btn-primary btn-disabled btn-sm text-xl self-center rounded-lg disabled:text-white overflow-hidden">Name</button>
+                    </template>
+                     <template x-if="sortBy != 1">
+                        <button @click="sortByName()"
+                            class="btn btn-sm text-xl self-center rounded-lg overflow-hidden
+                            hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.5)] 
+                            transition-all duration-300">
+                            Name
+                        </button>
+                    </template>
+
+                    <template x-if="sortBy == 2">
+                        <button disabled class="btn btn-outline btn-primary btn-disabled btn-sm text-xl self-center disabled:text-white rounded-lg overflow-hidden">Project Length</button>
+                    </template>
+                     <template x-if="sortBy != 2">
+                        <button @click="sortByLength()"
+                            class="btn btn-sm text-xl self-center rounded-lg overflow-hidden
+                            hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.5)] 
+                            transition-all duration-300">
+                            Project Length
+                        </button>
+                    </template>
+
+                    <template x-if="isAscending == true">
+                        <button @click="toggleAsc()"
+                        class="btn btn-sm text-xl self-center rounded-lg
+                        overflow-hidden hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.5)]
+                        transition-all duration-300">
+                        ↑
+                        </button>
+                    </template>
+                    <template x-if="isAscending == false">
+                        <button @click="toggleAsc()"
+                        class="btn btn-sm text-xl self-center rounded-lg
+                        overflow-hidden hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.5)]
+                        transition-all duration-300">
+                        ↓</button>
+                    </template>
+                </div>
+                <h1 class="text-white text-5xl text-shadow-md text-shadow-stone-200 text-right font-bold">Projects</h1>
+            </div>
             <div 
                 id="card-container"
-                style= "height: calc(100vh - var(--spacing) * 14)"
-                class= "hero bg-neutral-800/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4 overflow-hidden"
+                x-on:resize.window="resize()"
+                style= "height: calc(100vh - var(--spacing) * (51)); scrollbar-width: none;"
+                class= "bg-neutral-800/20 py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4 overflow-y-auto"
             > 
                 <div 
                     x-init="$watch('expanded', value => {
@@ -54,17 +144,30 @@
                             container.classList.remove('scroll-lock');
                         }
                     })"
-                    class = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+                    class="grid gap-4 transition-all duration-300 ease-in-out justify-between"
+                    style="transition: width 0.3s ease, grid-template-columns 0.3s ease;"
+                    :style="`grid-template-columns: repeat(${columns}, minmax(0, 1fr));`"
                 >
-                    <template x-for="(card, i) in cards" :key="i">
+                    <template x-for="(card, i) in activeCards" :key="i">
                         <div>
                             <button
                                 @click="toggleExpand(i); setExpanded(card)"
-                                class="card-body fruitger-inset bg-neutral-950/60 rounded-2xl aspect-square w-xs flex flex-col p-0 overflow-hidden text-left hover:brightness-125 active:scale-95 transition-all duration-300 ease-in-out"
+                                class="card-body fruitger-inset bg-neutral-950/60 rounded-2xl aspect-square flex flex-col gap-0 p-0 overflow-hidden text-left hover:brightness-125 active:scale-95 transition-all duration-300 ease-in-out"
+                                :style="`width: ${cardSize}px;`"
                             >
-                                <h2 class="card-title text-2xl px-7 pt-7" x-text="card.title"></h2>
-                                <p class="px-7 pt-2 text-lg font-display" x-text="card.shortDescription"></p>
-                                <img :src="card.thumbnail" class="flex flex-1 w-full object-cover bg-gradient-to-b from-teal-950/80 to-transparent pointer-events-none">
+                                <!-- Image takes 3/4 of height -->
+                                <div class="w-full h-4/8 overflow-hidden">
+                                    <img 
+                                        :src="card.thumbnail"
+                                        class="w-full h-full object-cover bg-gradient-to-b from-teal-950/80 to-transparent pointer-events-none"
+                                    />
+                                </div>
+
+                                <!-- Text takes remaining 1/4, scrolls if too long -->
+                                <div class="w-full h-4/8 p-5 overflow-hidden text-ellipsis">
+                                    <h2 class="card-title text-xl font-bold line-clamp-2" x-text="card.title"></h2>
+                                    <p class="text-md pt-5 font-display line-clamp-3" x-text="card.shortDescription"></p>
+                                </div>
                             </button>
                         </div>
                     </template>
