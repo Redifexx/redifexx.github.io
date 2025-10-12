@@ -22,18 +22,18 @@
         </video>
         <div class="absolute inset-0 bg-black/50 -z-10"></div>
 
-        <div class= "flex flex-col max-w-[24rem] gap-6">
+        <div class= "flex flex-col max-w-[15rem] gap-6">
             <div class= "bg-neutral-900/80 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl flex flex-col gap-4"> 
-                <h1 class="text-white text-4xl text-shadow-md text-shadow-stone-200 text-left font-bold">Giovanni Perez Colon</h1>
+                <h1 class="text-white text-2xl text-shadow-md text-shadow-stone-200 text-left font-bold">Giovanni Perez Colon</h1>
                 <div class = "flex flex-row gap-1 font-display justify-between text-shadow-none">
-                    <a href="../../index.html" class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">Home</a>
-                    <div class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">About</div>
-                    <div class="btn btn-sm inset-shadow-sm inset-shadow-emerald-50 text-xl rounded-lg">Contact</div>
+                    <a href="../../index.html" class="btn btn-xs inset-shadow-sm inset-shadow-emerald-50 text-sm rounded-lg">Home</a>
+                    <div class="btn btn-xs inset-shadow-sm inset-shadow-emerald-50 text-sm rounded-lg">About</div>
+                    <div class="btn btn-xs inset-shadow-sm inset-shadow-emerald-50 text-sm rounded-lg">Contact</div>
                 </div>
             </div>
 
-            <div class= "hero bg-neutral-800/70 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-hidden"> 
-                <h1 class="text-white text-3xl text-shadow-md text-shadow-stone-200 text-left font-bold">Tags</h1>
+            <div class= "hero bg-neutral-800/70 max-w-5xl py-10 px-10 rounded-3xl backdrop-blur-xl items-start flex flex-col flex-1 gap-4 overflow-y-auto"> 
+                <h1 class="text-white text-2xl text-shadow-md text-shadow-stone-200 text-left font-bold">Tags</h1>
                 <div class = "flex flex-wrap gap-2 font-display text-shadow-none">
                     <template x-for="(tag, i) in [...tags]" :key="i">
                         <div>
@@ -185,11 +185,12 @@
                     x-transition:leave="transition ease-in duration-200"
                     x-transition:leave-start="translate-y-0 opacity-100"
                     x-transition:leave-end="translate-y-full opacity-0"
+                    x-on:after-leave="setExpanded(null)"
                 > 
                     <div 
                     class = "overflow-y-auto flex-1"
                     >
-                        <h2 class="card-title text-5xl neu-text-shadow justify-center" x-text="expandedCard.title"></h2>
+                        <h2 class="card-title text-3xl neu-text-shadow justify-center" x-text="expandedCard.title"></h2>
 
                         <div class="carousel w-full bg-neutral-950/50 rounded-3xl fruitger-inset my-7">
                             <template x-for="(media, i) in expandedCard.media" :key="i">
@@ -211,7 +212,7 @@
                         <p class="text-lg" x-text="expandedCard.description0"></p>
                         <p class="text-lg mt-2" x-text="expandedCard.description1"></p>
                     </div>
-                    <button class="btn mt-4 rounded-lg justify-self-end bg-neutral-950 fruitger-inset" @click="toggleExpand(null); setExpanded(null)">Close</button>
+                    <button class="btn mt-4 rounded-lg justify-self-end bg-neutral-950 fruitger-inset" @click="expanded = null">Close</button>
                 </div>  
             </template>
         </div>
