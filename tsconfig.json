@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "lib": ["dom", "es2015"],
-      "outDir": "./lib/cjs/",
+      "outDir": "deprecated/cjs",
       "sourceMap": true,
       "declaration": true,
       "noImplicitAny": true,
@@ -11,5 +11,5 @@
       "moduleResolution": "node"
   },
   "include": ["src/**/*.ts*"],
-  "exclude": ["node_modules", "dist", "lib"]
+  "exclude": ["node_modules", "deprecated/dist", "lib"]
 }

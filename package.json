@@ -2,7 +2,7 @@
   "name": "redifexx.github.io",
   "version": "1.0.0",
   "description": "My website.",
-  "main": "./src/index.ts",
+  "main": "./index.html",
   "scripts": {
     "tw": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "wb": "webpack --watch",

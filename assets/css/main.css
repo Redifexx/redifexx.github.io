@@ -11,6 +11,31 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+
+
+/*--------------------------------------------------------------
+# Frosted Glass Card Style
+--------------------------------------------------------------*/
+.frosted-card {
+  background: rgba(30, 30, 30, 0.6); 
+    backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+    padding: 40px;
+  margin-bottom: 30px;
+  
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@media (max-width: 768px) {
+  .frosted-card {
+    padding: 20px;
+  }
+}
+
+
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Ubuntu",  sans-serif;
@@ -23,7 +48,7 @@
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ececec; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #121212; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #310606; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -463,6 +488,11 @@ h6 {
   padding-bottom: 25px;
 }
 
+.page-title-portfolio {
+  font-size: 36px;
+  font-weight: 700;
+}
+
 .page-title h1 {
   font-size: 24px;
   font-weight: 700;
@@ -537,47 +567,53 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section Background Updates
 --------------------------------------------------------------*/
-.hero {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.hero .background-elements {
-  position: absolute;
+.background-elements {
+  position: fixed; /* This makes it stick to the screen */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 0;     /* Puts it behind EVERYTHING on the page */
   overflow: hidden;
+  pointer-events: none; /* Ensures clicks pass through to your buttons */
 }
 
-.hero .background-elements .bg-circle {
+ .background-elements .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 95%));
-  animation: float 6s ease-in-out infinite;
+  /* THE SECRET SAUCE: Heavy blur makes it look like it's behind glass */
+  filter: blur(100px); 
+  opacity: 0.6; /* Adjust this to make the lights dimmer or brighter */
+  animation: float 5s ease-in-out infinite alternate;
 }
 
-.hero .background-elements .bg-circle.circle-1 {
-  width: 300px;
-  height: 300px;
-  top: 10%;
-  right: 10%;
-  animation-delay: 0s;
+/* Red Light (Top Right) */
+ .background-elements .bg-circle.circle-1 {
+  width: 600px; /* Made larger for softer diffusion */
+  height: 600px;
+  top: -150px;
+  right: -150px;
+  /* Soft Red Light */
+  background: radial-gradient(circle, rgba(198, 62, 50, 0.9) 0%, rgba(255, 60, 60, 0) 70%);
 }
 
-.hero .background-elements .bg-circle.circle-2 {
-  width: 200px;
-  height: 200px;
-  bottom: 20%;
-  left: 5%;
-  animation-delay: 2s;
+/* Blue Light (Bottom Left) */
+ .background-elements .bg-circle.circle-2 {
+  width: 600px; /* Made larger for softer diffusion */
+  height: 600px;
+  bottom: -150px;
+  left: -150px;
+  /* Soft Blue Light */
+  background: radial-gradient(circle, rgba(48, 121, 128, 0.9) 0%, rgba(60, 60, 255, 0) 70%);
+  animation-delay: -5s; /* Offsets the breathing animation */
+}
+
+/* Optional: Smoother Breathing Animation */
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20px, 20px) scale(1.1); }
 }
 
 .hero .hero-content {
@@ -1373,6 +1409,66 @@ section,
   }
 }
 
+.iitchio
+{
+  display: inline-block;
+  width: 1.2em; /* Itch icon is often wider/squatter, adjust as needed */
+  height: 1.2em;
+  vertical-align: middle;
+  
+  /* This makes the icon use the current text color */
+  background-color: currentColor; 
+  
+  mask: url('../img/icons/itchio.svg') no-repeat center;
+  -webkit-mask: url('../img/icons/itchio.svg') no-repeat center;
+  mask-size: contain;
+}
+
+.iitchio
+{
+  display: inline-block;
+  width: 1.2em; /* Itch icon is often wider/squatter, adjust as needed */
+  height: 1.2em;
+  vertical-align: middle;
+  
+  /* This makes the icon use the current text color */
+  background-color: currentColor; 
+  
+  mask: url('../img/icons/itchio.svg') no-repeat center;
+  -webkit-mask: url('../img/icons/itchio.svg') no-repeat center;
+  mask-size: contain;
+}
+
+.igithub
+{
+  display: inline-block;
+  width: 1.2em; /* Itch icon is often wider/squatter, adjust as needed */
+  height: 1.2em;
+  vertical-align: middle;
+  
+  /* This makes the icon use the current text color */
+  background-color: currentColor; 
+  
+  mask: url('../img/icons/github.svg') no-repeat center;
+  -webkit-mask: url('../img/icons/github.svg') no-repeat center;
+  mask-size: contain;
+}
+
+.ilinkedin
+{
+  display: inline-block;
+  width: 1.2em; /* Itch icon is often wider/squatter, adjust as needed */
+  height: 1.2em;
+  vertical-align: middle;
+  
+  /* This makes the icon use the current text color */
+  background-color: currentColor; 
+  
+  mask: url('../img/icons/linkedin.svg') no-repeat center;
+  -webkit-mask: url('../img/icons/linkedin.svg') no-repeat center;
+  mask-size: contain;
+}
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -1528,6 +1624,14 @@ section,
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
 }
 
+.portfolio .filters-wrapper-2 {
+  background-color: color-mix(in srgb, var(--surface-color), var(--default-color) 3%);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+
 @media (max-width: 991px) {
   .portfolio .filters-wrapper {
     padding: 20px;
@@ -1611,13 +1715,15 @@ section,
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
   z-index: 3;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateY(20px);
-  opacity: 0;
+  
+  transform: translateY(0); /* Was 20px */
+  opacity: 1;                /* Was 0 */
 }
 
 .portfolio .portfolio-wrap .portfolio-info .content {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translateY(20px);
+  
+  transform: translateY(0);
 }
 
 .portfolio .portfolio-wrap .portfolio-info .category {
@@ -1630,22 +1736,17 @@ section,
   margin-bottom: 8px;
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
-  color: var(--contrast-color);
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
 .portfolio .portfolio-wrap .portfolio-info .portfolio-links {
   display: flex;
-  gap: 12px;
+  justify-content: space-between; 
+  align-items: center;           
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-info .portfolio-links a {
   color: var(--contrast-color);
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1655,17 +1756,33 @@ section,
   transition: 0.3s;
 }
 
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links .button-group {
+
+  gap: 12px; 
+  margin-top: auto; 
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
 .portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover {
   background-color: var(--accent-color);
   transform: translateY(-3px);
 }
+
+.portfolio-description {
+  color: rgba(255, 255, 255, 0.814);
+  font-weight: 400;
+  font-style: italic;
+}
+
 
 .portfolio .portfolio-wrap:hover {
   transform: translateY(-5px);
 }
 
 .portfolio .portfolio-wrap:hover img {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
@@ -1675,6 +1792,133 @@ section,
 
 .portfolio .portfolio-wrap:hover .portfolio-info .content {
   transform: translateY(0);
+}
+
+
+/*custom stuff*/
+
+.portfolio-info .content {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.portfolio-info h4 {
+  color: #ffffff;
+}
+
+
+#portfolio-details .portfolio-info {
+  height: 100%;           
+  display: flex;
+  flex-direction: column;
+}
+
+#portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;          
+  min-height: 300px;     
+}
+
+#portfolio-details .portfolio-info ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;         
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+
+.portfolio-info ul li:last-child {
+  border-bottom: none;
+}
+
+.portfolio-info ul li strong {
+  font-size: 1.1rem; 
+  white-space: nowrap; 
+  color: #fff; 
+}
+
+.portfolio-info ul li span, 
+.portfolio-info ul li a {
+  font-size: 1.25rem;
+  text-align: right; 
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#portfolio-details .portfolio-description h4 {
+  font-size: 1.4rem;     
+  line-height: 1.6;     
+  font-weight: 500;      
+  color: var(--default-color); 
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+
+#portfolio-details .portfolio-description p {
+  font-size: 1.15rem;   
+  line-height: 1.8;    
+  color: rgba(255, 255, 255, 0.8); 
+  font-style: normal;
+}
+
+
+#portfolio-details .frosted-card {
+    padding-top: 0 !important;
+}
+
+
+.project-header-container {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  
+}
+
+
+.project-title-large {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); 
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #fff;
+  text-shadow: 
+      -2px -2px 1px rgba(255, 255, 255, 0.54),   
+      2px 2px 5px rgba(255, 255, 255, 0.539), 
+      0 0 20px rgba(255, 255, 255, 0.15);        
+}
+
+
+.project-tagline-right {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .project-header-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .project-tagline-right {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.portfolio-details .row.gy-4 {
+  --bs-gutter-y: 1rem;
 }
 
 /*--------------------------------------------------------------
