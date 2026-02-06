@@ -2872,3 +2872,20 @@ section,
   align-items: center;
   justify-content: center;
 }
+
+/* Ensures images fill the square grid without stretching */
+.object-fit-cover {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Zoom effect on hover */
+.ratio:hover .object-fit-cover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Makes the column resize smooth */
+.transition-width {
+  transition: all 0.3s ease-in-out;
+}
