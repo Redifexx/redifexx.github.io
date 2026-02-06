@@ -501,13 +501,13 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter=":not(.filter-hide)" data-layout="masonry" data-sort="original-order">
 
           <div class="column frosted-card">
             <div class="col-12 filter-sidebar mb-5">
             <div class="filters-wrapper-2" data-aos="fade-right" data-aos-delay="150">
               <ul class="portfolio-filters isotope-filters d-flex flex-row justify-content-evenly w-100 mb-0">
-                <li data-filter="*" class="filter-active">All Projects</li>
+                <li data-filter=":not(.filter-hide)" class="filter-active">All Projects</li>
                 <li data-filter=".filter-gamedev">Game Dev</li>
                 <li data-filter=".filter-softwaredev">Software Dev</li>
                 <li data-filter=".filter-3dart">3D Art</li>
@@ -518,9 +518,90 @@
             <div class="col-lg-12">
               <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
 
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-3dart filter-hide">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\3D Art\11.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Blender, Maya</span>
+                        <h4>3D Gallery</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Compilation</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\3D Art\11.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="gallery.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\magmacraft\8.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">OpenGL</span>
+                        <h4>MagmaCraft</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Current</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\magmacraft\8.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="magmacraft.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-3dart">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\3D Art\29.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Godot</span>
+                        <h4>The Blackbox Protocol</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Current</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\3D Art\29.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="blackbox.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\magmaframework\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">OpenGL</span>
+                        <h4>Magma Framework</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\magmaframework\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="magmaframework.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets\portfolio\squeak_n_steal\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\squeak_n_steal\4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
@@ -529,7 +610,7 @@
                           <span class="portfolio-description">Fall 2025</span>
                           
                           <div class="button-group">
-                            <a href="assets\portfolio\squeak_n_steal\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="assets\portfolio\squeak_n_steal\4.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
                             <a href="squeak_n_steal.html"><i class="bi bi-arrow-right"></i></a>
                           </div>
                         </div>
@@ -538,16 +619,41 @@
                   </div>
                 </div><!-- End Portfolio Item -->
 
+                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\lava_webgl\4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">WebGL</span>
+                        <h4>Lava Engine</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\lava_webgl\4.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="lavawebgl.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\project_mass\9.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Project Mass</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Summer 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\project_mass\9.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="project_mass.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -556,30 +662,38 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\giggles\9.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Giggles Goofy Gameshow</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\giggles\9.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="giggles.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-softwaredev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\lava_webgl\4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Unity VR</span>
-                        <h4>Project Kleos</h4>
+                        <span class="category">OpenGL</span>
+                        <h4>Voxel Rendering Project</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\lava_webgl\4.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="vrp.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -588,31 +702,58 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <span class="category">Unity</span>
-                        <h4>The Wiz</h4>
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-                
-
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\marrow_25\6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Marrow (2025)</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\marrow_25\6.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="marrow25.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\the_wiz\5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Unity</span>
+                        <h4>The Wiz</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\the_wiz\5.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="wiz.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-3dart">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\Nanami\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Maya</span>
+                        <h4>Nanami</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\Nanami\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="nanami.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -620,16 +761,121 @@
                 </div><!-- End Portfolio Item -->
 
 
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-3dart">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\SteampunkPC\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Maya</span>
+                        <h4>Steampunk PC</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Spring 2025</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\SteampunkPC\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="steampunk.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\kleos\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Unity VR</span>
+                        <h4>Kleos</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\kleos\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="kleos.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\midnight\10.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Unity</span>
+                        <h4>Midnight</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\midnight\10.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="midnight.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\rgl_minecraft\10.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">OpenGL</span>
+                        <h4>RGL Craft</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\rgl_minecraft\10.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="rglcraft.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\rgl\12.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">OpenGL</span>
+                        <h4>Redifexx GL (RGL)</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Summer 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\rgl\12.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="rgl.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\openui\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>OpenUI</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Summer 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\openui\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="openui.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -638,30 +884,59 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\orientation\9.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Orientation</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\orientation\9.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="orientation.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\raytracer\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">C++</span>
+                        <h4>First Hit Ray Tracer</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Spring 2024</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\raytracer\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="raytracer.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\marrow_23\7.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Marrow (2023)</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Fall 2023</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\marrow_23\7.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="marrow23.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -670,14 +945,18 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\gatorsportsvr\5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity VR</span>
                         <h4>Gator Sports VR</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Fall 2023</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\gatorsportsvr\5.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="gsvr.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -686,31 +965,38 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\bitdefender\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
-                        <h4>Bit Defender</h4>
+                        <h4>BitDefender</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" title="Urban Stories"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2023</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\bitdefender\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="bitdefender.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
-              
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-softwaredev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\minesweeper\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Unity</span>
-                        <h4>To Go Alone</h4>
+                        <span class="category">C++ & SFML</span>
+                        <h4>Minesweeper</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Fall 2022</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\minesweeper\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="minesweeper.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -719,14 +1005,18 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\droopycube\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>Droopy Cube</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Summer 2022</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\droopycube\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="droopycube.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -736,14 +1026,18 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\theyperish\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>They Perish</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" title="Woodcraft Design"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Summer 2022</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\theyperish\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="perish.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -753,20 +1047,63 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
                   <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <img src="assets\portfolio\theeffect\3.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                     <div class="portfolio-info">
                       <div class="content">
                         <span class="category">Unity</span>
                         <h4>The Effect</h4>
                         <div class="portfolio-links">
-                          <a href="assets/img/portfolio/portfolio-portrait-1.webp" class="glightbox" title="Capturing Moments"><i class="bi bi-plus-lg"></i></a>
-                          <a href="portfolio-details.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
+                          <span class="portfolio-description">Spring 2022</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\theeffect\3.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="effect.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div><!-- End Portfolio Item -->
 
+                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-softwaredev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\tapemake\1.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Java Swing</span>
+                        <h4>TapeMake</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Fall 2020</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\tapemake\1.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="tapemake.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gamedev">
+                  <div class="portfolio-wrap">
+                    <img src="assets\portfolio\misc_projects\2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
+                    <div class="portfolio-info">
+                      <div class="content">
+                        <span class="category">Unity</span>
+                        <h4>Misc Projects</h4>
+                        <div class="portfolio-links">
+                          <span class="portfolio-description">Compilation</span>
+                          
+                          <div class="button-group">
+                            <a href="assets\portfolio\misc_projects\2.webp" class="glightbox"><i class="bi bi-plus-lg"></i></a>
+                            <a href="miscprojects.html"><i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
 
               </div><!-- End Portfolio Container -->
             </div>

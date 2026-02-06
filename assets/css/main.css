@@ -1804,6 +1804,10 @@ section,
   border-radius: 8px;
 }
 
+.portfolio .portfolio-wrap:hover .portfolio-info .content {
+  backdrop-filter: blur(1px); 
+}
+
 .portfolio-info h4 {
   color: #ffffff;
 }
@@ -1851,6 +1855,8 @@ section,
   text-align: right; 
   color: rgba(255, 255, 255, 0.8);
 }
+
+
 
 #portfolio-details .portfolio-description h4 {
   font-size: 1.4rem;     
@@ -2543,8 +2549,19 @@ section,
 }
 
 .portfolio-details .portfolio-info ul li a {
-  color: var(--accent-color);
-  transition: 0.3s;
+  color: rgb(255, 185, 245); 
+  font-weight: 600; 
+  
+  font-size: 1.25rem;
+  text-align: right;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.portfolio-info ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--accent-color);
+  text-decoration: none;
 }
 
 .portfolio-details .portfolio-info ul li a:hover {
@@ -2791,4 +2808,67 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+
+.swiper-slide .mobile-screenshot {
+  width: auto !important;       
+  height: 100% !important;      
+  max-height: 70vh;             
+  object-fit: contain;          
+  margin: 0 auto;               
+  display: block;
+}
+
+
+.swiper-slide {
+  background-color: #2a2a2a;   
+  display: flex;                
+  justify-content: center;
+  align-items: center;
+}
+
+
+.portfolio-details-slider .swiper-slide:has(.mobile-screenshot) {
+  height: 80vh !important;   
+  min-height: 600px; 
+  background-color: #2a2a2a;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Target the IMAGE itself */
+.portfolio-details-slider .swiper-slide img.mobile-screenshot {
+  width: auto !important;      
+  height: 100% !important;     
+  max-height: none !important; 
+  object-fit: contain !important; 
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-details-slider .swiper-slide img:not(.mobile-screenshot) {
+  width: 100% !important;       /* Force it to stretch across the screen */
+  height: auto !important;      /* Let the height adjust naturally */
+  max-height: 80vh;             /* Optional: Prevent it from being too tall */
+  object-fit: contain;          /* Ensure the whole image is visible */
+}
+
+/* Make the YouTube iframe fill the slide area */
+.portfolio-details-slider .swiper-slide iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;       /* Keeps the video in standard widescreen format */
+  max-height: 80vh;         /* Prevents it from getting too tall on huge screens */
+  display: block;
+}
+
+/* Optional: Ensures the slide itself handles the video content correctly */
+.portfolio-details-slider .swiper-slide.youtube-slide {
+  background-color: #000;   /* Black bars for cinematic look */
+  height: auto;             /* Let the video dictate the height if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
