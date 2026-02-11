@@ -2889,3 +2889,36 @@ section,
 .transition-width {
   transition: all 0.3s ease-in-out;
 }
+
+.download-pdf
+{
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.download-pdf:hover
+{
+  background-color: 
+    color-mix(in srgb, var(--accent-color), black 50%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 5px 
+  color-mix(in srgb, var(--accent-color), transparent 60%);
+  padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+}

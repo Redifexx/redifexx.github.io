@@ -27,6 +27,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- =======================================================
   * Template Name: SnapFolio
   * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
@@ -115,6 +116,10 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
+                  <img src="assets\portfolio\raytracer\8.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
+                </div>
+
+                <div class="swiper-slide">
                   <img src="assets\portfolio\raytracer\1.webp" alt="Portfolio Image" class="img-fluid" loading="lazy">
                 </div>
 
@@ -168,6 +173,12 @@
 
                 I implemented the Blinn-Phong shading model to calculate diffuse and specular lighting, while manually computing the Model-View-Projection (MVP) matrices to handle camera perspective. To strictly rely on the underlying math, I avoided all rasterization APIs, using OpenGL only to open the window, and rendered the final frame by writing raw pixel data directly to a TGA image buffer.
               </p>
+            </div>
+            <div class="cta-section d-flex justify-content-evenly mt-4"> 
+              <a href="assets/resume/RayTracerReport.pdf" class="btn btn-primary download-pdf">
+                <i class="bi bi-download"></i>
+                Download Project Report
+              </a>
             </div>
           </div>
 
